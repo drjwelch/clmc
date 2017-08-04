@@ -1,0 +1,36 @@
+#!CLMC
+start         inp           
+              add           #1
+              brz           dequeue
+              sub           #1
+enqueue       sta           (tail)
+              lda           tail
+              add           #1
+              sta           tail
+              bra           start
+dequeue       lda           tail
+              sub           head
+              brz           empty
+              lda           (head)
+              out           
+              lda           head
+              add           #1
+              sta           head
+              bra           start
+empty         lda           #0
+              sub           #1
+              out           
+              hlt           
+tail          dat           queue
+head          dat           queue
+              dat           
+queue         dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0

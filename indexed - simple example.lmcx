@@ -1,0 +1,17 @@
+#!CLMC
+              ldx           count
+loop          lda           array,X
+              add           #5
+              sta           array,x
+              dex           
+              txa           
+              brp           loop
+              hlt           
+              dat           99
+              dat           99
+count         dat           4
+array         dat           2
+              dat           4
+              dat           6
+              dat           8
+              dat           10

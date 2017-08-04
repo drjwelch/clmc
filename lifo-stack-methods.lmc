@@ -1,0 +1,36 @@
+#!CLMC
+start         inp           
+              add           #1
+              brz           pop
+              sub           #1
+push          sta           (sp)
+              lda           sp
+              add           #1
+              sta           sp
+              bra           start
+pop           lda           sp
+              sub           base
+              brz           empty
+              lda           sp
+              sub           #1
+              sta           sp
+              lda           (sp)
+              out           
+              bra           start
+empty         lda           #0
+              sub           #1
+              out           
+              hlt           
+sp            dat           stack
+base          dat           stack
+              dat           
+stack         dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0
+              dat           0

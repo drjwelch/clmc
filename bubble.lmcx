@@ -1,0 +1,38 @@
+#!CLMC
+	bra	start
+dstart	dat	5
+	dat	6
+	dat	9
+	dat	2
+	dat	11
+	dat	1
+	dat	7
+	dat	10
+length	dat	7
+temp	dat	0
+swaps	dat	0
+start	lda	#0
+	sta	swaps
+	tax	
+loop	txa	
+	sub	length
+	brz	amidone
+	lda	dstart,x
+	sta	temp
+	inx	
+	lda	dstart,x
+	sub	temp
+	brp	loop
+doswap	add	temp
+	dex	
+	sta	dstart,x
+	inx	
+	lda	temp
+	sta	dstart,x
+	lda	#1
+	sta	swaps
+	bra	loop
+amidone	lda	swaps
+	brz	done
+	bra	start
+done	hlt	

@@ -1,0 +1,27 @@
+#!CLMC
+' division by subtraction
+' NB div mod need resetting
+' on each run		
+	inp	
+	sta	b
+	inp	
+	sta	a
+loop	sub	b
+	sta	a
+	brp	go_on
+	bra	done
+go_on	lda	div
+	add	#1
+	sta	div
+	lda	a
+	brz	end
+	bra	loop
+done	add	b
+	sta	mod
+end	lda	div
+	out	
+	hlt	
+div	dat	
+mod	dat	
+a	dat	
+b	dat	

@@ -1,0 +1,31 @@
+#!CLMC
+	lda	#0
+	sta	result
+	lda	#4
+	sta	count
+loop	lda	op2
+	ldx	#1
+	and	
+	brz	even
+odd	lda	op1
+	add	result
+	sta	result
+even	lda	op1
+	lsl	
+	sta	op1
+	lda	op2
+	lsr	
+	sta	op2
+	ldx	count
+	dex	
+	txa	
+	sta	count
+	brz	done
+	bra	loop
+done	lda	result
+	out	
+	hlt	
+count	dat	0
+result	dat	0
+op1	dat	5
+op2	dat	6

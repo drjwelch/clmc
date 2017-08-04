@@ -1,0 +1,23 @@
+#!CLMC
+' sum of data array		
+	ldx	#0
+' sum must be 0 to start		
+loop	lda	sum
+	add	data,x
+	sta	sum
+	inx	
+	txa	
+	sub	len
+	brp	done
+	bra	loop
+done	lda	sum
+	out	
+sum	dat	0
+len	dat	5
+	dat	99
+data	dat	6
+	dat	8
+	dat	3
+	dat	9
+	dat	4
+	dat	77

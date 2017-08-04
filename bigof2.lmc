@@ -1,0 +1,15 @@
+#!CLMC
+	inp	
+	sta	first
+	inp	
+	sta	second
+	sub	first
+	brp	bigis2
+bigis1	lda	#1
+	out	
+	hlt	
+bigis2	lda	#2
+	out	
+	hlt	
+first	dat	
+second	dat	

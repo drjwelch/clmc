@@ -1,0 +1,21 @@
+#!CLMC
+	lda	zero
+	sta	reslt
+	lda	op2
+	sub	one
+	sta	op2
+loop	lda	reslt
+	add	op1
+	sta	reslt
+	lda	op2
+	sub	one
+	sta	op2
+	brp	loop
+	lda	reslt
+	out	
+	hlt	
+zero	dat	0
+one	dat	1
+reslt	dat	0
+op1	dat	5
+op2	dat	6

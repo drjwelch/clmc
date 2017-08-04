@@ -1,0 +1,9 @@
+#!CLMC
+              lda           #10
+              sta           pointer
+              add           pointer
+              sta           pointer
+              lda           #66
+              sta           (pointer)
+              hlt           
+pointer       dat           0
