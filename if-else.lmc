@@ -1,0 +1,11 @@
+#!CLMC
+start	inp	
+	brp	then
+else	lda	neg
+	out	
+	hlt	
+then	lda	pos
+	out	
+	hlt	
+pos	dat	1
+neg	dat	-1

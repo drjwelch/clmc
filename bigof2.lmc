@@ -5,11 +5,13 @@
 	sta	second
 	sub	first
 	brp	bigis2
-bigis1	lda	#1
+bigis1	lda	one
 	out	
 	hlt	
-bigis2	lda	#2
+bigis2	lda	two
 	out	
 	hlt	
 first	dat	
 second	dat	
+one dat 1
+two dat 2

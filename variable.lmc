@@ -1,0 +1,7 @@
+#!CLMC
+	inp	
+	sta	age
+	lda	age
+	out	
+	hlt	
+age	dat	

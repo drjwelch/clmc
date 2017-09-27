@@ -1,0 +1,7 @@
+#!CLMC
+do	inp	
+	sta	number
+until	brp	do
+	hlt	
+one	dat	1
+number	dat	0

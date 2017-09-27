@@ -1,7 +1,9 @@
 #!CLMC
               lda           #10
               sta           pointer
-              add           pointer
+              lda           #33
+              sta           (pointer)
+              lda           #12
               sta           pointer
               lda           #66
               sta           (pointer)

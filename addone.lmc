@@ -1,0 +1,6 @@
+#!CLMC
+	inp	
+	add	one
+	out	
+	hlt	
+one	dat	1

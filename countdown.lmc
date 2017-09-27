@@ -1,0 +1,9 @@
+#!CLMC
+	inp	
+	sta	count
+loop	out	
+	sub	one
+	brp	loop
+	hlt	
+count	dat	
+one	dat	1

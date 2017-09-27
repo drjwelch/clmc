@@ -1,0 +1,29 @@
+#!CLMC
+	inp	
+	sta	value
+	lda	zero
+	sta	trinum
+	sta	n
+loop	lda	trinum
+	sub	value
+	brp	endloop
+	lda	n
+	add	one
+	sta	n
+	add	trinum
+	sta	trinum
+	bra	loop
+endloop	lda	value
+	sub	trinum
+	brz	equal
+	lda	zero
+	out	
+	bra	done
+equal	lda	n
+	out	
+done	hlt	
+value	dat	000
+trinum	dat	000
+n	dat	000
+zero	dat	000
+one	dat	001
